@@ -1,0 +1,120 @@
+<!DOCTYPE>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>STRONA 8 CSS</title>
+    </head>
+    
+    <body>
+        <h2 id="top">CSS (Cascading Style Sheets)</h2>
+        <p>Język służący do opisu wyglądu strony.<br>
+            Dzięki CSS możemy zmieniać sposób wyświetlania elementów strony:
+        </p>
+        <ul>
+            <li>Czcionek</li>
+            <li>Odnośników</li>
+            <li>Marginesów</li>
+            <li>Pozycję danego elementu względem okna przeglądarki lub innych elementów</li>
+        </ul>
+        <p>
+            <textarea rows="6" cols="50">
+                p {
+                    color: red;
+                    font-size: 12px;
+                    border: 1px solid black;
+                }
+            </textarea>
+        </p>
+        <h2>Reguły CSS - struktura</h2>
+        <ul>
+            <li>Każda reguła CSS zbudowana jest z wartości.</li>
+            <li>Po nazwie własności występuje dwukropek, a cała reguła kończona jest średnikiem.</li>
+            <li>Jeśli nazwa własności składa się z kilku wyrazów, poszczególne wyrazy łączy się krótką kreską(łącznikiem)</li>
+            <li>Jeśli wartość włąsności składa się z kilku członów, odddziela się je spacją.</li>
+        </ul>
+        <h2>Selektory</h2>
+        <p>
+            Są to zapisy przypisujące reguły CSS do odpowiednich elementów HTML. Jest wiele sposobób tworzenia selektorów. Najczęściej używane to: element HTML, atrybut id, atrybut class<br>
+            W nawiasach klamrowych podajemy reguły CSS, które mają być zastosowane do elementów określonych przez selektor. W przykładzie selektor odwołuje się do elementu p. Do wszystkich paragrafów w dokumencie będą zatem zastosowane reguły zawarte w nawiasach klamrowych.
+        </p>
+        <p>
+            <textarea rows="6" cols="50"> 
+                p {
+                    color: red;
+                    font-size: 24px;
+                    border: 1px solid black;
+                }
+            </textarea>
+        </p>
+        <h2>Identyfikatory</h2>
+        <p>
+            Co należy zrobić, jeśli chcemy przypisać reguły CSS tylko do jednego wybranego elementu HTML?<br>
+            Należy określić atrybut id elementu oraz przypisać reguły CSS za pomocą odpowiednio utworzonego selektora.
+        </p>
+        <p>
+            Atrybut id jest unikalnym identyfikatorem, będziemy mogli zatem zdefiniować reguły CSS tylko dla tego jednego elementu HTML.
+        </p>
+        <h2>#identyfikator</h2>
+        <p>Selektor poprzedzony znakiem hash (#) będzie odnisił się tylko do elementów strony o tym id.</p>
+        
+        <h2>KOD HTML</h2>
+            <textarea rows="6" cols="80">
+                <p id="intro">
+                    Ten paragraf oznaczyłem za pomocą identyfikatora intro. 
+                    Będzie on zamieniony za pomocą stylowania css.
+                </p>
+            </textarea>
+        
+        <img src="images/CSS1.png" alt="htmlBorder" title="HTML BORDER">
+        
+        <h2>KOD CSS</h2>
+            <textarea rows="6" cols="80">
+            #intro {
+                color: red;
+                font-size: 12px;
+                border: 1px solid black;
+            }
+            </textarea>
+        
+        <img src="images/CSS2.png" alt="cssBorder" title="CSS BORDER">
+        
+        <h2>.klasa</h2>
+        
+        <p>Co jeśli chcielibyśmy przypisać reguły CSS do wielu różnego typu elemetnów HTML?</p>
+        <p>Należy określić atrybut class dla takiego elementy oraz przypisać reguły CSS za pomocą odpowiednio utworzonego selektora</p>
+        <p>Atrybut class można zdefiniować dla każdego elementu HTML</p>
+        <p>Najlepiej jest korztystać z klas, a nie z id. Przy rozbudowie dokumentu dany element może wystąpić po raz drugi.</p>
+        <h3>.klasa</h3>
+        <p>Selektor poprzedzony znakiem kropki odnsi się tylko do elementów strony o podanej klasie.</p>
+        
+        <h2 class="content">Nagłówek ma klasę content.</h2>
+        <p class="content">Ten paragraf oznaczyłem za pomocą klasy content.</p>
+        <p class="content">Następny paragraf także oznaczyłem za pomocą klasy content.</p>
+        
+        <h3>KOD HTML</h3>
+            
+            <textarea rows="4" cols="100">
+                <h2 class="content">Nagłówek ma klasę content.</h2>
+                <p class="content">Ten paragraf oznaczyłem za pomocą klasy content.</p>
+                <p class="content">Następny paragraf także oznaczyłem za pomocą klasy content.</p>   
+            </textarea>
+        
+        <h3>KOD CSS</h3>
+            <textarea rows="6" cols="80">
+                .content {
+                    color: #00f;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+            </textarea>
+        
+        
+        <br>
+        <br>
+        <br>
+        
+        <div>
+            <a href id="top"> Idź do góry</a>
+        </div>
+    </body>
+</html>
