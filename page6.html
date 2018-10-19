@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>STRONA 6 - Tabele</title>
+    </head>
+    
+    <body>
+        <h2 id="top">TABELE</h2>
+            <div>
+                <p>Tabela składa się ze znacznika &lt;table&gt;, w którym zagnieżdzona jest cała tabela.</p>
+                <p> &lt;tr&gt;(table row) - znacznik, w którym zagnieżdzony jest jeden rząd.</p>
+                <p>&lt;td&gt;(table data) - znacznik, w którym zagnieżdzona jest wartość jednej komórki.</p>
+                <p> Domyślnie krawędzie tabeli, wierszy i komórek nie są wyświetlane.</p>
+                <p> Sposób wyświetlania tabeli zmeniamy przy pomocy CSS. </p>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td>1.1</td>
+                        <td>1.2</td>
+                    </tr>
+                    <tr>
+                        <td>2.1</td>
+                        <td>2.2</td>
+                    </tr>
+                    <tr>
+                        <td>3.1</td>
+                        <td>3.2</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <p>&lt;th&gt; (table header) - znacznik służący do zaznaczenia zawartości danej kolumny lub wiersza</p>
+                <p>Domyślnie zawartość nagłówków jest pogrubiona</p>
+                <p>Stosujemy w ten sam sposób jak elementy &lt;td&gt;</p>
+                <p>np</p>
+                    <table>
+                        <tr>
+                            <th>kolumna 1</th>
+                            <th>kolumna 2</th>
+                        </tr>
+                        <tr>
+                            <td>1.1</td>
+                            <td>1.2</td>
+                        </tr>
+                        <tr>
+                            <td>2.1</td>
+                            <td>2.2</td>
+                        </tr>
+                    </table>
+            </div>
+            <div>
+                <h2>Zasięg nagłówków</h2>
+                <p>Atrybut scope (zasięg elementu&lt;th&gt;) - zawiera informację o tym, którego zakresu danych dotyczy dany nagłówek (np. rząd lub kolumnę).</p>
+                <p>Gdy definiujemy nagłówek kolumny, atrybut scope ustawiamy na col</p>
+                <p>Gdy definiujemy nagłówek wiersza, atrybut scope powinien mieć wartość row</p>
+                <p>&lt;th scope="col"&gt;</p>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th scope="col">imię i nazwisko</th>
+                        <th scope="col">miejsce urodzenia</th>
+                        <th scope="col">rozpoczęcie działalności</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Aubrey Drake Graham</td>
+                        <td>Toronto</td>
+                        <td>2001</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Robin Rihanna Fenty</td>
+                        <td>Saint Michael</td>
+                        <td>2005</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <h2>Łączenie komórek</h2>
+                <p>Atrybut colespan określa, ile ma zajmować dana komórka tablicy.</p>
+                <p>Atrybut rowspan określa, ile wieszy ma zajmować dana komórka tablicy.</p>
+                <p>Oba te atrybuty przyjmują wartości całkowite dodatnie. Komórki możemy łączyć w pionie i w poziomie.</p>
+                <p>np.: &lt;th colespan="" rowspan""&gt;</p>
+            
+                <table>
+                    <tr>
+                        <th></th>
+                        <th scope="col">Język</th>
+                        <th scope="col">Ludność</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Niemcy</th>
+                        <td rowspan="2">niemiecki</td>
+                        <td>80,62</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Austria</th>
+                        <td>8,475</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <p>Tabele możemy podzielić na trzy sekcje w następującej kolejnośći:</p>
+                <p>nagłówek &lt;thead&gt;</p>
+                <p>ciało &lt;tbody&gt;</p>
+                <p>stopkę&lt;tfoot&gt;</p>
+                <p>W nagłówku umieszczamy nagłówki kolumn, w ciele zasadniczą zawartość tabeli, w stopce - podsumownie. Podział nie jest wymagany, pozwala on jednak lepiej uporządkować zawartość tabeli oraz przydaje się w jej późniejszym ostylowaniu w CSS.</p>
+                
+                <table>
+                    <thead>
+                        <th> !----------- Nagłówek tabeli-------------> </th>
+                        <th scope="col">Nazwa 1</th>
+                        <th scope="col">Nazwa 2</th>
+                    </thead>
+                    <tbody>
+                        <tr> !----------- Zawartość ciała tabeli ---></tr>
+                        
+                    </tbody>
+                    <tfoot>
+                        <tr> !----------- Zawartość stopki tabeli---></tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div>
+                <a href id="top"> Idź do góry</a>
+            </div>
+    </body>
+</html>
